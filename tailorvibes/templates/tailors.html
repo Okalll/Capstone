@@ -1,0 +1,259 @@
+{% block content %}
+{{form.media}}
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+h2,p {font-family: "Oswald"}
+body {
+font-family: "Open Sans"
+background-color: "#D3D3D3"
+}
+</style>
+<body class="w3-light-grey">
+<div class="w3-bar w3-black w3-hide-small">
+<a href="/index" class="w3-bar-item w3-button">HOME</a>
+<a href="{% url 'market' %}" class="w3-bar-item w3-button">MARKETPLACE</a>
+<a href="{% url 'tailors' %}" class="w3-bar-item w3-button">TAILORS</a>
+<a href="{% url 'hire' %}" class="w3-bar-item w3-button">HIRE TAILOR</a>
+<a href="#" class="w3-bar-item w3-button"><i class="fa fa-twitter"></i></a>
+<a href="#" class="w3-bar-item w3-button"><i class="fa fa-linkedin"></i></a>
+<a href="#" class="w3-bar-item w3-button w3-right"><i class="fa fa-search"></i></a>
+</div>
+<!------ Include the above in your HEAD tag ---------->
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" crossorigin="anonymous">
+<div class="container">
+<h2 class="text-center">EMBRASSER L'AFRIQUE TAILORS</h2>
+<br>
+<div class="card-container">
+<div class="custom-card">
+<div class="card-img-box">
+    <img src="http://www.sugarweddings.com/files/styles/width-640/public/Ankara%20dress%20styles%20%281%29_0.jpg?itok=LZ54VRU2">
+</div>
+<div class="card-content">
+    <h2>Michelle<br><span>Apple Inc - ISR</span></h2>
+    <p>
+        "Fashion never dies"
+    </p>
+
+    <ul>
+        <li><a href="{% url 'hire' %}">HIRE</a></li>
+        <li><a href="{% url 'market' %}">DESIGNS</a></li>
+    </ul>
+</div>
+</div>
+<div class="custom-card">
+<div class="card-img-box">
+    <img src="https://netstorage-yen.akamaized.net/images/3o3bpd51as1b35kru.jpg">
+</div>
+<div class="card-content">
+    <h2>Simon<br><span>Fashion shade </span></h2>
+    <p>
+        "Old fashion is new Fashion"
+    </p>
+
+    <ul>
+        <li><a href="{% url 'hire' %}">HIRE</a></li>
+        <li><a href="{% url 'market' %}">DESIGNS</a></li>
+    </ul>
+</div>
+</div>
+<div class="custom-card">
+<div class="card-img-box">
+    <img src="https://i1.wp.com/luxafrique.net/wp-content/uploads/2016/06/Vlisco-lux-afrique-1.jpg?w=826&h=530" />
+
+</div>
+<div class="card-content">
+    <h2>Angela<br><span>Seneca - Tailor and designer</span></h2>
+    <p>
+        "One is never over-dressed or under-dressed with a Little Black Dress." 
+    </p>
+
+    <ul>
+        <li><a href="{% url 'hire' %}">HIRE</a></li>
+        <li><a href="{% url 'market' %}">DESIGNS</a></li>
+    </ul>
+</div>
+</div>
+
+<div class="custom-card">
+<div class="card-img-box">
+    <img src="https://i.pinimg.com/originals/93/7c/2f/937c2f64871cd19701e841fc90fcb0e5.jpg">
+</div>
+<div class="card-content">
+    <h2>Okusa<br><span>Flamer fashion</span></h2>
+    <p>
+        "I firmly believe that with the right footwear one can rule the world."
+    </p>
+
+    <ul>
+        <li><a href="{% url 'hire' %}">HIRE</a></li>
+        <li><a href="{% url 'market' %}">DESIGNS</a></li>
+    </ul>
+</div>
+</div>
+<div class="custom-card">
+<div class="card-img-box">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyPbCL2U9dhfo8wKzg9ZJEpno_afX3Xm1WR-NGq8mAtU4eo1ot">
+</div>
+<div class="card-content">
+    <h2>Nduta<br><span>Downtown fashion</span></h2>
+    <p>
+        "In difficult times, fashion is always outrageous."
+    </p>
+
+    <ul>
+        <li><a href="{% url 'hire' %}">HIRE</a></li>
+        <li><a href="{% url 'market' %}">DESIGNS</a></li>
+    </ul>
+</div>
+</div>
+<div class="custom-card">
+<div class="card-img-box">
+    <img src="https://i.etsystatic.com/14183328/r/il/00344c/1698667385/il_570xN.1698667385_r788.jpg">
+</div>
+<div class="card-content">
+    <h2>Smith<br><span>BD Designers</span></h2>
+    <p>
+        "When in doubt, wear red."
+    </p>
+
+    <ul>
+        <li><a href="{% url 'hire' %}">HIRE</a></li>
+        <li><a href="{% url 'market' %}">DESIGNS</a></li>
+    </ul>
+</div>
+</div>
+</div> 
+</div>
+<br>
+<br>
+<hr>
+<!-- Footer -->
+<!-- Footer -->
+<footer class="w3-container w3-dark-grey" style="padding:32px">
+<a href="#" class="w3-button w3-black w3-padding-large w3-margin-bottom"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+<div class="w3-center">
+<a href="#" class="w3-bar-item w3-button"><i class="fa fa-facebook-official"></i></a>
+<a href="#" class="w3-bar-item w3-button"><i class="fa fa-instagram"></i></a>
+<a href="#" class="w3-bar-item w3-button"><i class="fa fa-snapchat"></i></a>
+<a href="#" class="w3-bar-item w3-button"><i class="fa fa-flickr"></i></a>
+<a href="#" class="w3-bar-item w3-button"><i class="fa fa-twitter"></i></a>
+<a href="#" class="w3-bar-item w3-button"><i class="fa fa-linkedin"></i></a>
+</div>
+</footer>
+{% endblock %}
+<style>
+
+.card-container {
+width: 1000px;
+margin: 15px auto 0;
+height: auto;
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows: 440px;
+grid-gap: 40px;
+}
+
+.card-container .custom-card {
+position:relative;
+background: #000;
+overflow: hidden;
+border-radius: 10px;
+transition: .5s;
+height:350px;
+
+}
+
+.card-container .custom-card:hover {
+transform: translateY(-20px);
+box-shadow: 0 20px 20px rgba(0,0,0,0.2);
+
+}
+.card-container .custom-card .card-img-box {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+transition: 0.5s;
+}
+
+.card-container .custom-card:hover .card-img-box {        
+opacity: 0.5;
+}
+
+.card-container .custom-card .card-img-box img {
+width:350px;
+height: 100%;
+}
+
+.card-container .custom-card .card-content {
+position: absolute;
+width: 100%;
+height: 60%;
+bottom: -100%;
+padding: 20px;
+box-sizing: border-box;
+text-align: center;
+transition: 0.5s;
+padding-top: 30px;
+}
+
+.card-container .custom-card:hover .card-content {
+bottom:0
+}
+
+.card-container .custom-card:nth-child(1) {
+background: linear-gradient(0deg, #c21833, transparent)
+}
+.card-container .custom-card:nth-child(2) {
+background: linear-gradient(0deg, #8012a5, transparent)
+}
+.card-container .custom-card:nth-child(3) {
+background: linear-gradient(0deg, #3a414c, transparent)
+}
+
+.card-container .custom-card .card-content h2 {
+margin: 0 0 10px;
+padding:0;
+color: #fff;
+font-size: 20px;
+}
+
+.card-container .custom-card .card-content h2 span {        
+color: #ffeb3b;
+font-size: 16px;
+}
+
+.card-container .custom-card .card-content p {
+margin: 0;
+padding: 0;
+color: #fff;
+font-size: 13px;
+}
+
+.card-container .custom-card .card-content ul {
+display: flex;
+margin: 10px 0 0;
+padding: 0;
+align-items: center;
+justify-content: center;
+}
+
+.card-container .custom-card .card-content ul  li {
+list-style: none;
+
+}
+.card-container .custom-card .card-content ul li a {
+color: #fff;
+padding: 0 10px;
+font-size: 18px;
+transition: 0.5s;
+}
+</style>

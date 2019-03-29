@@ -1,0 +1,225 @@
+<html>
+<body>
+{{form.media}}
+{% block content %}
+<title>EMBRASSER L'AFRIQUE DESIGNS</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+h1,h2,h3,h4,h5,h6 {font-family: "Oswald"}
+body {font-family: "Open Sans"}
+</style>
+<body class="w3-light-grey">
+
+<!-- Navigation bar with social media icons -->
+<div class="w3-bar w3-black w3-hide-small">
+<a href="{% url 'index' %}" class="w3-bar-item w3-button">HOME</a>
+<a href="{% url 'market' %}" class="w3-bar-item w3-button">MARKETPLACE</a>
+<a href="{% url 'tailors' %}" class="w3-bar-item w3-button">TAILORS</a>
+<a href="{% url 'hire' %}" class="w3-bar-item w3-button">HIRE A TAILOR</a>
+<a href="#" class="w3-bar-item w3-button w3-right"><i class="fa fa-search"></i></a>
+</div>
+<h1 id="title" style="color:black;">EMBRASSER L'AFRIQUE DESIGNS</h1>
+<div id="form-outer">
+<p id="description">
+  Get a tailor of your desire!
+</p>
+<form id="survey-form" method="GET" action="/action_page.php">
+  <div class="rowTab">
+    <div class="labels">
+      <label id="name-label" for="name">* Name: </label>
+    </div>
+    <div class="rightTab">
+      <input autofocus type="text" name="name" id="name" class="input-field" placeholder="Enter your name" required>
+    </div>
+  </div>
+  <div class="rowTab">
+    <div class="labels">
+      <label id="email-label" for="email">* Email: </label>
+    </div>
+    <div class="rightTab">
+      <input type="email" name="email" id="email" class="input-field" required placeholder="Enter your Email">
+    </div>
+  </div>
+  <div class="rowTab">
+    <div class="labels">
+      <label for="currentPos">Your current location?</label>
+    </div>
+    <div class="rightTab">
+      
+      <select id="dropdown" name="currentPos" class="dropdown">
+          
+    <option disabled value>Select an option</option>
+    <option  value="student">Westlands</option>
+    <option value="job">Kileleshwa</option>
+    <option value="learner">Buruburu</option>
+    <option value="preferNo">Jamhuri</option>
+    <option value="other">Umoja</option>
+    <option value="other">Kahawa</option>
+  </select>
+    </div>
+  </div>
+
+  <div class="rowTab">
+    <div class="labels">
+      <label for="most-like">Choose a tailor: </label>
+    </div>
+    <div class="rightTab">
+      <select id="most-like" name="mostLike" class="dropdown">
+    <option disabled selected value>Select an option</option>
+    <option value="text">Sasha</option>
+    <option value="text">Simon</option>
+    <option value="text">OKusa</option>
+    <option value="text">Michelle</option>
+    <option value="text">Nduta</option>
+    <option value="text">Smith</option>
+  </select>
+    </div>
+  </div>
+  <div class="rowTab">
+    <div class="labels">
+      <label for="comments">Any Comments or Suggestions?</label>
+    </div>
+    <div class="rightTab">
+      <textarea id="comments" class="input-field" style="height:50px;resize:vertical;" name="comment" placeholder="Enter your comment here..."></textarea>
+    </div>
+  </div>
+  <button id="submit" type="submit" value="send"><a href="{% url 'index' %}">Submit</a></button>
+</form>
+</div>
+{% endblock %}
+</body>
+</html>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Assistant:300');
+html,
+body {
+background: url("https://img.grouponcdn.com/iam/4BDvY9nboPFRq26FmyFUcxLPrAEm/4B-2048x1229/v1/c700x420.jpg") no-repeat;
+opacity: 0.8;
+background-size: cover;
+text-align: center;
+font-family: 'Assistant', sans-serif;
+min-width: 320px;
+
+}
+
+header {
+font-size: 2em;
+font-weight: bold;
+margin: 20px;
+}
+
+#title {
+color: white;
+font-family: 'Assistant', sans-serif;
+font-size: 35px;
+}
+
+#description {
+font-size: 20px;
+}
+
+#form-outer {
+background-color: rgb(250, 250, 250);
+margin: 0 auto;
+border-radius: 4px;
+width: 75%;
+max-width: 900px;
+padding: 10px;
+padding-top: 20px;
+}
+
+.labels {
+display: inline-block;
+text-align: right;
+width: 40%;
+padding: 5px;
+vertical-align: top;
+margin-top: 10px;
+}
+
+.rightTab {
+display: inline-block;
+text-align: left;
+width: 48%;
+vertical-align: middle;
+}
+
+.input-field {
+height: 20px;
+width: 280px;
+padding: 5px;
+margin: 10px;
+border: 1px solid #c0c0c0;
+border-radius: 2px;
+}
+
+#userAge {
+width: 40px;
+}
+
+.userRatings,
+input[type="checkbox"] {
+float: left;
+margin-right: 5px;
+}
+
+#submit {
+background-color: #cc9a37;
+border-radius: 4px;
+color: white;
+font-size: 1em;
+height: 40px;
+width: 96px;
+margin: 10px;
+border: 0px solid;
+}
+
+.dropdown {
+height: 35px;
+width: 140px;
+padding: 5px;
+margin: 10px;  
+margin-top: 15px;
+border: 1px solid #c0c0c0;
+border-radius: 2px;
+}
+
+.radio, .checkbox {
+position: relative;
+left: -43px;
+margin-left: 10px;
+display: block;
+padding-bottom: 10px;
+}
+
+@media screen and (max-width: 833px) {
+.input-field {
+  width: 80%;
+}
+select {
+  width: 90%;
+}
+}
+
+@media screen and (max-width: 520px) {
+.labels {
+  width: 100%;
+  text-align: left;
+}
+.rightTab {
+  width: 80%;
+  float: left;
+}
+.input-field {
+  width: 100%;
+}
+select {
+  width: 100%;
+}
+}
+</style>

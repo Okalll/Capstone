@@ -1,0 +1,224 @@
+{{form.media}}
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+h2,p {font-family: "Oswald"}
+body {
+	font-family: "Open Sans"
+	background-color: "#D3D3D3"
+}
+<!------ Include the above in your HEAD tag ---------->
+
+
+<!DOCTYPE html><html class=''>
+<head><script src='//production-assets.codepen.io/assets/editor/live/console_runner-079c09a0e3b9ff743e39ee2d5637b9216b3545af0de366d4b9aad9dc87e26bfd.js'></script><script src='//production-assets.codepen.io/assets/editor/live/events_runner-73716630c22bbc8cff4bd0f07b135f00a0bdc5d14629260c3ec49e5606f98fdd.js'></script><script src='//production-assets.codepen.io/assets/editor/live/css_live_reload_init-2c0dc5167d60a5af3ee189d570b1835129687ea2a61bee3513dee3a50c115a77.js'></script><meta charset='UTF-8'><meta name="robots" content="noindex"><link rel="shortcut icon" type="image/x-icon" href="//production-assets.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico" /><link rel="mask-icon" type="" href="//production-assets.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111" /><link rel="canonical" href="https://codepen.io/linux/pen/QgMoQa?limit=all&page=5&q=box" />
+
+
+<style class="cp-pen-styles">@import url('https://fonts.googleapis.com/css?family=Amiri|Aref+Ruqaa|Cairo|Changa|El+Messiri|Harmattan|Jomhuria|Lateef|Mirza|Rakkas|Lato|Source+Sans+Pro|Ubuntu');
+/* *{transition: 0.3s linear; padding:0;margin:0;} */
+body{
+	background-image: linear-gradient(-225deg, rgba(44, 216, 213, 0.45) 0%, #C5C1FF 56%, rgba(255, 186, 195, 0.71) 100%);
+
+
+background-repeat: no-repeat;
+background-attachment: fixed;
+}
+h2 {margin:2em; letter-spacing:0.2em; color: #EEE}
+.container{
+margin: 3em auto;
+width: 90%;
+text-align: center;
+/* 	font-family: 'Aref Ruqaa', serif; */
+font-family: 'Ubuntu', sans-serif;
+/* font-family: 'Lato', sans-serif; */
+font-family: 'Source Sans Pro', sans-serif;
+
+
+}
+.item {
+/* 	background: #FFF; */
+margin: 2em;
+display: inline-block;
+width: 200px;
+height: 200px;
+border-radius: 20px;
+transform: rotate(45deg);
+position: relative;
+overflow: hidden;
+transition: all 0.3s ease-in-out;
+padding:0;
+box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+margin: 0 auto;
+}
+.item p {
+position: absolute;
+transform: rotate(-45deg);
+top: 30%;
+left: -20%;
+background: rgba(0, 0, 0, 0.7);
+padding: 10px 20px;
+width:130%;
+text-align:center;
+color: #fff;
+transition: all 0.3s ease-in-out;
+
+}
+
+.item:hover {
+transform: none;
+transform: scale(1.5);
+z-index:2;
+box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.item:hover > p {
+transform: none;
+top: 0;
+
+}
+
+
+img {
+width: 100%;
+height: 100%;
+transition: 0.3s linear;
+transform: rotate(-45deg) scale(1.4) 
+
+
+}
+.item:hover > img {
+transform: none;
+
+}
+
+p.ar {
+font-family: 'Rakkas', cursive;
+font-size:1.1em;
+
+}
+
+
+
+
+body::-webkit-scrollbar
+{
+width: 0.7em;
+background-color: #EEE;
+}
+
+body::-webkit-scrollbar-thumb{
+/* 	background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%); */
+background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+/* 	background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%); */
+/*   background: linear-gradient(to top, #2193b0, #6dd5ed);  */
+border-radius:1em;
+}
+
+</style>
+<body class="w3-light-grey">
+<div class="w3-bar w3-black w3-hide-small">
+<a href="/index" class="w3-bar-item w3-button">HOME</a>
+<a href="{% url 'market' %}" class="w3-bar-item w3-button">MARKETPLACE</a>
+<a href="{% url 'tailors' %}" class="w3-bar-item w3-button">TAILORS</a>
+<a href="{% url 'hire' %}" class="w3-bar-item w3-button">HIRE TAILOR</a>
+<a href="#" class="w3-bar-item w3-button"><i class="fa fa-twitter"></i></a>
+<a href="#" class="w3-bar-item w3-button"><i class="fa fa-linkedin"></i></a>
+<a href="#" class="w3-bar-item w3-button w3-right"><i class="fa fa-search"></i></a>
+</div>
+</head>
+<div class="container">
+<h2 style="color:black;">EMBRASSER L'AFRIQUE DESIGNS</h2>
+
+<div class="item tm1">
+	<img src="https://images3.jiji.ng/10592455_1501887203714_620x413.jpg">
+<p>Ankara bags</p>
+</div>
+
+
+<div class="item tm2">
+	<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8VQ3C0-1LXSbAvdfP7lPqC38y4jT5ihvwm32rW_NbWKS8M5hT">
+<p>Shoes and a bag </p>
+</div>
+
+	<div class="item tm3">
+		<img src="https://glitternglued.files.wordpress.com/2012/07/screen-shot-2012-07-23-at-8-08-35-am.png">
+<p class="ar">Ankara sandals</p>
+</div>
+
+<div class="item tm4">
+	<img src="https://cdn.shopify.com/s/files/1/1477/1822/products/F60E3DC325B33A6C9C30998AA44A0015_394x.jpg?v=1501483073">
+<p>Canvas boots</p>
+</div>
+<br>
+<span>
+	<div class="item tm5">
+	<img src="https://images2.jiji.ng/11010381_1503297283111_620x413.jpg">
+<p>Bracelets</p>
+</div>
+
+
+<div class="item tm6">
+	<img src="https://villageeffort.com/wp-content/uploads/2018/10/b2b-2-300x300.jpg">
+<p>A bag</p>
+</div>
+
+	<div class="item tm7">
+		<img src="http://imperialedservices.com/skillacquisition/wp-content/uploads/2017/08/ankara-bag-making.jpg">
+<p>Variety of bags</p>
+</div>
+<span>
+<br>
+
+
+
+<div class="item tm8">
+	<img src="https://i.pinimg.com/originals/31/5d/80/315d804701bc30153fd0b2099921922e.jpg">
+<p>Ankara dress</p>
+</div>
+
+
+<div class="item tm2">
+	<img src="https://www.allthingsankara.com/wp-content/uploads/2018/07/gala-9-ankara-print-suit-designers-men-can-wear-to-water-is-life-africa-gives-back-international-gala-on-saturday-july-14th-in-silver-spring-maryland-5.jpg">
+<p>Men's suit</p>
+</div>
+
+	<div class="item tm3">
+		<img src="https://netstorage-legit.akamaized.net/images/vllkyt3s6jgikd37d.jpg">
+<p>Ankara coat</p>
+</div>
+
+<div class="item tm4">
+	<img src="https://cdn.shopify.com/s/files/1/0684/2619/products/men-s-african-print-dashiki-t-shirt-forrest-green-maroon-2_grande.jpeg?v=1528411227">
+<p>Dashiki</p>
+</div>
+</div>
+	<footer class="w3-container w3-dark-grey" style="padding:32px">
+<a href="#" class="w3-button w3-black w3-padding-large w3-margin-bottom"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+<div class="w3-center">
+<a href="#" class="w3-bar-item w3-button"><i class="fa fa-facebook-official"></i></a>
+<a href="#" class="w3-bar-item w3-button"><i class="fa fa-instagram"></i></a>
+<a href="#" class="w3-bar-item w3-button"><i class="fa fa-snapchat"></i></a>
+<a href="#" class="w3-bar-item w3-button"><i class="fa fa-flickr"></i></a>
+<a href="#" class="w3-bar-item w3-button"><i class="fa fa-twitter"></i></a>
+<a href="#" class="w3-bar-item w3-button"><i class="fa fa-linkedin"></i></a>
+</div>
+</footer>
+</div>
+<script src='//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js'></script>
+<script >// font-family: 'Changa', sans-serif; */
+// /* font-family: 'Cairo', sans-serif; */
+// /* font-family: 'Amiri', serif; */
+// /* font-family: 'Rakkas', cursive; */
+// /* font-family: 'Jomhuria', cursive; */
+// /* font-family: 'Mirza', cursive; */
+// /* font-family: 'Harmattan', sans-serif; */
+// /* font-family: 'El Messiri', sans-serif; */
+// /* font-family: 'Lateef', cursive;
+//# sourceURL=pen.js
+</script>
+</body></html>
